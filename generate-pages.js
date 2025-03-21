@@ -53,7 +53,7 @@ async function generatePages() {
       
       // Create data object for template
       const eventData = {
-        title: fields.title || 'Event',
+        title: fields.title || '',
         date_start: fields.date_start || '',
         date_end: fields.date_end || '',
         time: fields.time || '',
