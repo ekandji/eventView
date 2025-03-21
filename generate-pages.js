@@ -53,13 +53,14 @@ async function generatePages() {
       
       // Create data object for template
       const eventData = {
-        title: fields.Title || 'Event',
-        date: fields.Date || '',
-        time: fields.Time || '',
-        location: fields.Location || '',
-        description: fields.Description || '',
-        timezone: fields.Timezone || 'PDT / GMT-07:00',
-        backgroundImage: fields.BackgroundImage || ''
+        title: fields.title || 'Event',
+        date_start: fields.date_start || '',
+        date_end: fields.date_end || '',
+        time: fields.time || '',
+        location: fields.location || '',
+        description: fields.description || '',
+        timezone: fields.timezone || 'PDT / GMT-07:00',
+        backgroundImage: fields.backgroundImage || ''
       };
       
       // Generate HTML content from template
