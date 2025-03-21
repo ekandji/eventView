@@ -60,7 +60,7 @@ async function generatePages() {
         location: fields.location || '',
         description: fields.description || '',
         timezone: fields.timezone || 'PDT / GMT-07:00',
-        backgroundImage: fields.backgroundImage || ''
+        backgroundImage: fields.image || ''
       };
       
       // Generate HTML content from template
