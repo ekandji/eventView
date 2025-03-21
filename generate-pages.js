@@ -44,11 +44,11 @@ async function generatePages() {
       }
       
       const fields = record.fields;
-      console.log(`Processing record: ${fields.Title || recordId}`);
+      console.log(`Processing record: ${fields.title || recordId}`);
       
       // Generate a slug for the file name
-      const slug = fields.Title 
-        ? fields.Title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+      const slug = fields.title 
+        ? fields.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
         : recordId;
       
       // Create data object for template
@@ -73,7 +73,7 @@ async function generatePages() {
       // Mark as processed
       processedRecords[recordId] = {
         slug: slug,
-        title: fields.Title,
+        title: fields.title,
         processedAt: new Date().toISOString()
       };
       
