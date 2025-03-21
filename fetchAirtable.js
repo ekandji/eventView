@@ -28,10 +28,10 @@ async function generatePages() {
         const filename = `${OUTPUT_DIR}/${id}.html`;
         const content = `
             <html>
-            <head><title>${fields.Title}</title></head>
+            <head><title>${fields.title}</title></head>
             <body>
-                <h1>${fields.Title}</h1>
-                <p>${fields.Description}</p>
+                <h1>${fields.title}</h1>
+                <p>${fields.description}</p>
             </body>
             </html>
         `;
