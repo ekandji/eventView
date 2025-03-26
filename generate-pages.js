@@ -50,12 +50,24 @@ async function generatePages() {
       const slug = fields.title 
         ? fields.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
         : recordId;
+      //convert ISO-8601 time to human friendly time.
+    
+      var startDate = function(){
+        var isodate = new Datefields.date_start);
+        var localedateformat = isodate.toLocaleDateString('en-US');
+        return lolocaledateformat;
+      }
+      var endDate = function(){
+        var isodate = new Datefields.date_end);
+        var localedateformat = isodate.toLocaleDateString('en-US');
+        return lolocaledateformat;
+      }
       
       // Create data object for template
       const eventData = {
         title: fields.title || '',
-        date_start: fields.date_start || '',
-        date_end: fields.date_end || '',
+        date_start: startDate || '',
+        date_end: endDate || '',
         time: fields.time || '',
         location: fields.location || '',
         description: fields.description || '',
