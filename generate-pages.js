@@ -53,12 +53,12 @@ async function generatePages() {
       //convert ISO-8601 time to human friendly time.
     
       var startDate = function(){
-        var isodate = new Datefields.date_start);
+        var isodate = new Date(fields.date_start);
         var localedateformat = isodate.toLocaleDateString('en-US');
         return lolocaledateformat;
       }
       var endDate = function(){
-        var isodate = new Datefields.date_end);
+        var isodate = new Date(fields.date_end);
         var localedateformat = isodate.toLocaleDateString('en-US');
         return lolocaledateformat;
       }
